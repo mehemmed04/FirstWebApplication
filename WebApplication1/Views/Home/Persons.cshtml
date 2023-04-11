@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.PersonViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Persons</title>
+</head>
+<body>
+
+    @foreach (var item in Model.Persons)
+    {
+
+        <div>
+            <h1>Name : @item.Name</h1>
+            <h1>Surname : @item.Surname</h1>
+            <h1>Image : @item.Image</h1>
+            <h1>Age : @item.Age</h1>
+        </div>
+    }
+    <hr />
+
+    <a href="Person/Add">Add New User</a>
+
+</body>
+</html>
+

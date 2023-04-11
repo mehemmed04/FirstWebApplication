@@ -1,0 +1,42 @@
+﻿@model WebApplication1.Models.PersonAddViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add</title>
+</head>
+<body>
+
+    <a href="/Person/Persons">GO HOME</a>
+
+    <form asp-controller="Person" asp-action="Add" method="post">
+        <section>
+            <label asp-for="Person.Name"></label>
+            <input asp-for="Person.Name" />
+            <span style="color:red;" asp-validation-for="Person.Name"></span>
+        </section>
+        <section>
+            <label asp-for="Person.Surname"></label>
+            <input asp-for="Person.Surname" />
+            <span style="color:red;" asp-validation-for="Person.Surname"></span>
+        </section>
+        <section>
+            <label asp-for="Person.Age"></label>
+            <input asp-for="Person.Age" />
+            <span style="color:red;" asp-validation-for="Person.Age"></span>
+        </section>
+        <section>
+            <label asp-for="Person.Image"></label>
+            <input asp-for="Person.Image" />
+            <span style="color:red;" asp-validation-for="Person.Image"></span>
+        </section>
+        <section>
+            <button type="submit">Submit</button>
+        </section>
+    </form>
+
+</body>
+</html>
